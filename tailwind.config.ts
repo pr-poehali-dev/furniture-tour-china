@@ -58,12 +58,12 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				tour: {
-					orange: '#FF5C2E',
-					yellow: '#FFD23F',
-					dark: '#0D0D0D',
-					charcoal: '#1A1A1A',
-					gray: '#2A2A2A',
-					light: '#F5F0E8',
+					orange: '#1A56DB',
+					yellow: '#60A5FA',
+					dark: '#F0F6FF',
+					charcoal: '#EAF2FF',
+					gray: '#D6E8FF',
+					light: '#1E3A5F',
 				}
 			},
 			borderRadius: {
