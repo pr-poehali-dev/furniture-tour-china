@@ -166,7 +166,7 @@ export default function Index() {
       <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "glass-dark py-3 shadow-lg shadow-black/30" : "py-6 bg-transparent"}`}>
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="font-display text-2xl font-bold uppercase tracking-widest">
-            <span className="text-gradient">МЕБЕЛЬ</span><span className="text-white">ТУР</span>
+            <span className="text-gradient">КРАС</span><span className="text-white">ЭКСПРЕСС</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -383,9 +383,9 @@ export default function Index() {
 
             <div className="space-y-5">
               {[
-                { icon: "Phone", label: "Телефон", value: "+7 (800) 000-00-00" },
-                { icon: "Mail", label: "Email", value: "info@tour-expedition.ru" },
-                { icon: "MapPin", label: "Адрес", value: "Москва, ул. Горная, 12" },
+                { icon: "Phone", label: "Телефон", value: "8-923-811-10-00" },
+                { icon: "Mail", label: "Email", value: "krasexpress@mail.ru" },
+                { icon: "MapPin", label: "Адрес", value: "г. Красноярск, ул. Вавилова 2А/18" },
               ].map((c, i) => (
                 <div key={i} className="flex items-center gap-4 group">
                   <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-gradient-tour group-hover:border-transparent transition-all">
@@ -429,9 +429,9 @@ export default function Index() {
       <footer className="border-t border-white/5 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="font-display text-lg font-bold uppercase">
-            <span className="text-gradient">МЕБЕЛЬ</span><span className="text-white/60">ТУР</span>
+            <span className="text-gradient">КРАС</span><span className="text-white/60">ЭКСПРЕСС</span>
           </span>
-          <span className="text-white/30 font-body text-sm">© 2026 МебельТур. Все права защищены.</span>
+          <span className="text-white/30 font-body text-sm">© 2026 Крас Экспресс. Все права защищены.</span>
           <div className="flex gap-4">
             {NAV_ITEMS.map(item => (
               <button
