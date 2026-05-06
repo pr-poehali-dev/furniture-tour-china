@@ -10,15 +10,16 @@ const NAV_ITEMS = [
 ];
 
 const PROGRAM = [
-  { day: "1", title: "Перелёт и заезд", desc: "Встреча в аэропорту Гуанчжоу, трансфер в отель, вводный брифинг. Знакомство с командой и планом поездки.", icon: "Plane" },
-  { day: "2", title: "Мебельный центр №1", desc: "Посещение крупнейшего выставочного комплекса Foshan — тысячи поставщиков мягкой мебели, спален и гостиных.", icon: "Building2" },
-  { day: "3", title: "Фабрики и переговоры", desc: "Экскурсия на производство, встречи с фабриками, проверка качества. Помощь переводчика и байера на всех переговорах.", icon: "Factory" },
-  { day: "4", title: "Оформление документов", desc: "Подготовка контрактов, инвойсов, упаковочных листов и деклараций. Проверка документации совместно с таможенным специалистом.", icon: "FileCheck" },
-  { day: "5", title: "Закупки и отправка", desc: "Финальный выбор товаров, оформление заказов, расчёт логистики. Гала-ужин с партнёрами и трансфер в аэропорт.", icon: "PackageCheck" },
+  { day: "1", title: "Прилёт и заселение", desc: "Прилёт, заселение в гостиницу, знакомство с гидом.", icon: "Plane" },
+  { day: "2", title: "Шоу-румы и выставки", desc: "Посещение шоу-румов и выставок мебели.", icon: "Building2" },
+  { day: "3", title: "Шоу-румы", desc: "Посещение шоу-румов.", icon: "Store" },
+  { day: "4", title: "Выставки", desc: "Посещение выставок.", icon: "LayoutGrid" },
+  { day: "5", title: "Документы и закупка", desc: "Оформление документов, закупка товара.", icon: "FileCheck" },
+  { day: "6", title: "Экскурсионная программа", desc: "Экскурсионная программа (оплачивается отдельно).", icon: "Map" },
+  { day: "7", title: "Выселение и трансфер", desc: "Выселение, трансфер в аэропорт.", icon: "LogOut" },
 ];
 
 const FEATURES = [
-  { icon: "Users", value: "8", label: "человек в группе" },
   { icon: "Calendar", value: "7", label: "дней в Китае" },
   { icon: "Store", value: "50+", label: "фабрик и шоурумов" },
   { icon: "Shield", value: "100%", label: "поддержка байера и переводчика" },
@@ -170,12 +171,12 @@ export default function Index() {
             <span className="text-gradient">КРАС</span><span className="text-[#1E3A5F]">ЭКСПРЕСС</span>
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-3">
             {NAV_ITEMS.map(item => (
               <button
                 key={item.href}
                 onClick={() => scrollTo(item.href)}
-                className="text-[#1E3A5F]/70 hover:text-[#1A56DB] font-body font-medium text-sm uppercase tracking-widest transition-colors"
+                className="bg-[#EAF2FF] text-[#1A56DB] hover:bg-[#1A56DB] hover:text-white font-body font-semibold text-sm px-5 py-2 rounded-full uppercase tracking-wider transition-all border border-[#1A56DB]/20 hover:border-[#1A56DB]"
               >
                 {item.label}
               </button>
@@ -199,7 +200,7 @@ export default function Index() {
               <button
                 key={item.href}
                 onClick={() => scrollTo(item.href)}
-                className="text-[#1E3A5F]/80 hover:text-[#1A56DB] font-body font-medium text-base uppercase tracking-widest text-left transition-colors"
+                className="bg-[#EAF2FF] text-[#1A56DB] font-body font-semibold text-sm px-5 py-3 rounded-xl uppercase tracking-wider text-left hover:bg-[#1A56DB] hover:text-white transition-all"
               >
                 {item.label}
               </button>
@@ -263,7 +264,7 @@ export default function Index() {
 
       {/* STATS */}
       <section className="bg-white border-y border-[#1A56DB]/10">
-        <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
           {FEATURES.map((f, i) => (
             <AnimatedSection key={i} className="text-center">
               <div className="text-gradient font-display text-4xl font-bold mb-1">{f.value}</div>
