@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMAGE = "https://cdn.poehali.dev/projects/b2ca4c4f-6481-4d25-9503-c3b1746f8503/files/080f2cab-f975-4480-b968-5ba7b570a14a.jpg";
+const HERO_IMAGE = "https://cdn.poehali.dev/projects/b2ca4c4f-6481-4d25-9503-c3b1746f8503/files/fc7bad79-7f2b-4126-8e49-e01f3016a6b9.jpg";
 
 const NAV_ITEMS = [
   { label: "О туре", href: "#about" },
@@ -10,17 +10,17 @@ const NAV_ITEMS = [
 ];
 
 const PROGRAM = [
-  { day: "1", title: "Старт экспедиции", desc: "Сбор группы, инструктаж, первый переход через базовый лагерь. Знакомство с командой и маршрутом.", icon: "Flag" },
-  { day: "2", title: "Подъём в горы", desc: "Восхождение на первый перевал. Панорамные виды, фотостоп на вершине, ночёвка у горного озера.", icon: "Mountain" },
-  { day: "3", title: "День открытий", desc: "Исследование ущелья, водопады и дикая природа. Обед у реки, вечерний костёр и рассказы гидов.", icon: "Compass" },
-  { day: "4", title: "Финальный перевал", desc: "Самый живописный участок маршрута. Спуск в долину, торжественный ужин и награждение участников.", icon: "Award" },
+  { day: "1", title: "Перелёт и заезд", desc: "Встреча в аэропорту Гуанчжоу, трансфер в отель, вводный брифинг. Знакомство с командой и планом поездки.", icon: "Plane" },
+  { day: "2", title: "Мебельный центр №1", desc: "Посещение крупнейшего выставочного комплекса Foshan — тысячи поставщиков мягкой мебели, спален и гостиных.", icon: "Building2" },
+  { day: "3", title: "Фабрики и переговоры", desc: "Экскурсия на производство, встречи с фабриками, проверка качества. Помощь переводчика и байера на всех переговорах.", icon: "Factory" },
+  { day: "4", title: "Закупки и отправка", desc: "Финальный выбор товаров, оформление заказов, расчёт логистики. Гала-ужин с партнёрами и трансфер в аэропорт.", icon: "PackageCheck" },
 ];
 
 const FEATURES = [
-  { icon: "Users", value: "12", label: "человек в группе" },
-  { icon: "Calendar", value: "4", label: "дня впечатлений" },
-  { icon: "MapPin", value: "3200", label: "метров над уровнем моря" },
-  { icon: "Shield", value: "100%", label: "безопасность и страховка" },
+  { icon: "Users", value: "8", label: "человек в группе" },
+  { icon: "Calendar", value: "7", label: "дней в Китае" },
+  { icon: "Store", value: "50+", label: "фабрик и шоурумов" },
+  { icon: "Shield", value: "100%", label: "поддержка байера и переводчика" },
 ];
 
 function useInView(threshold = 0.15) {
@@ -166,7 +166,7 @@ export default function Index() {
       <nav className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "glass-dark py-3 shadow-lg shadow-black/30" : "py-6 bg-transparent"}`}>
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="font-display text-2xl font-bold uppercase tracking-widest">
-            <span className="text-gradient">ТУР</span><span className="text-white">ЭКСПЕДИЦИЯ</span>
+            <span className="text-gradient">МЕБЕЛЬ</span><span className="text-white">ТУР</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -225,17 +225,17 @@ export default function Index() {
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
             <div className="w-2 h-2 rounded-full bg-[#FFD23F] animate-pulse" />
-            <span className="font-body text-sm text-white/90 uppercase tracking-widest">Сезон 2026 · Набор открыт</span>
+            <span className="font-body text-sm text-white/90 uppercase tracking-widest">Китай 2026 · Набор открыт</span>
           </div>
 
           <h1 className="font-display text-6xl md:text-8xl font-bold uppercase leading-none mb-6 animate-fade-up" style={{ animationFillMode: "both" }}>
-            <span className="text-gradient">Покори</span>
+            <span className="text-gradient">Мебельный</span>
             <br />
-            <span className="text-white">вершины</span>
+            <span className="text-white">тур в Китай</span>
           </h1>
 
           <p className="font-body text-xl md:text-2xl text-white/70 max-w-2xl mx-auto mb-10 animate-fade-up animate-delay-200" style={{ animationFillMode: "both" }}>
-            Уникальная горная экспедиция для тех, кто хочет выйти за пределы привычного
+            Закупочный тур на мебельные фабрики Гуанчжоу и Фошань — с байером, переводчиком и полным сопровождением
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up animate-delay-400" style={{ animationFillMode: "both" }}>
@@ -281,20 +281,20 @@ export default function Index() {
               <span className="font-body text-sm text-[#FF5C2E] uppercase tracking-widest font-semibold">О туре</span>
             </div>
             <h2 className="font-display text-5xl md:text-6xl font-bold uppercase leading-tight mb-6 text-white">
-              Где начинается
+              Прямые закупки
               <br />
-              <span className="text-gradient">настоящее</span>
+              <span className="text-gradient">без посредников</span>
               <br />
-              приключение
+              из Китая
             </h2>
             <p className="text-white/60 font-body text-lg leading-relaxed mb-6">
-              Наша экспедиция — это не просто поход. Это возможность открыть в себе силы, о которых вы даже не подозревали. Опытные гиды, безопасные маршруты и незабываемые пейзажи.
+              Мы организуем полный цикл закупочного тура: от перелёта до оформления заказа на фабрике. Вы работаете напрямую с производителями Фошань и Гуанчжоу — крупнейших мебельных центров мира.
             </p>
             <p className="text-white/60 font-body text-lg leading-relaxed">
-              Каждый участник получает полное снаряжение, страховку, питание на всём маршруте и профессиональные фотографии с тура.
+              В стоимость включены: проживание, трансферы, профессиональный байер, переводчик на всех переговорах и помощь с логистикой доставки в Россию.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              {["Безопасность", "Снаряжение включено", "Фото с тура", "Страховка"].map(tag => (
+              {["Байер включён", "Переводчик", "Проживание", "Логистика в РФ"].map(tag => (
                 <span key={tag} className="border border-white/15 text-white/70 font-body text-sm px-4 py-2 rounded-full">
                   {tag}
                 </span>
@@ -304,7 +304,7 @@ export default function Index() {
 
           <AnimatedSection>
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl">
-              <img src={HERO_IMAGE} alt="Горный тур" className="w-full h-full object-cover" />
+              <img src={HERO_IMAGE} alt="Мебельный тур в Китай" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 glass-dark rounded-2xl p-4 flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-gradient-tour flex items-center justify-center flex-shrink-0">
@@ -312,7 +312,7 @@ export default function Index() {
                 </div>
                 <div>
                   <div className="font-display font-bold text-white text-lg">4.9 / 5.0</div>
-                  <div className="text-white/50 font-body text-sm">Средняя оценка участников</div>
+                  <div className="text-white/50 font-body text-sm">Средняя оценка наших туристов</div>
                 </div>
               </div>
             </div>
@@ -330,9 +330,9 @@ export default function Index() {
               <div className="w-8 h-0.5 bg-gradient-tour" />
             </div>
             <h2 className="font-display text-5xl md:text-6xl font-bold uppercase text-white leading-tight">
-              4 дня, которые
+              7 дней в Китае —
               <br />
-              <span className="text-gradient">изменят всё</span>
+              <span className="text-gradient">полная программа</span>
             </h2>
           </AnimatedSection>
 
@@ -344,7 +344,7 @@ export default function Index() {
                     <Icon name={item.icon} fallback="Star" size={22} className="text-white" />
                   </div>
                   <div className="flex-1">
-                    <span className="text-[#FF5C2E] font-display text-sm font-bold uppercase tracking-widest">День {item.day}</span>
+                    <span className="text-[#FF5C2E] font-display text-sm font-bold uppercase tracking-widest">День {item.day} из 7</span>
                     <h3 className="font-display text-2xl font-bold text-white uppercase mt-1 mb-2">{item.title}</h3>
                     <p className="text-white/55 font-body leading-relaxed">{item.desc}</p>
                   </div>
@@ -378,7 +378,7 @@ export default function Index() {
               <span className="text-gradient">вопросы?</span>
             </h2>
             <p className="text-white/60 font-body text-lg leading-relaxed mb-10">
-              Напишите нам или позвоните — ответим в течение часа и расскажем всё о туре, снаряжении и условиях.
+              Напишите нам или позвоните — ответим в течение часа и расскажем всё о туре, условиях участия и стоимости.
             </p>
 
             <div className="space-y-5">
@@ -408,9 +408,9 @@ export default function Index() {
                 <div className="w-14 h-14 rounded-2xl bg-gradient-tour flex items-center justify-center mb-6">
                   <Icon name="Rocket" size={24} className="text-white" />
                 </div>
-                <h3 className="font-display text-3xl font-bold text-white uppercase mb-3">Готов к старту?</h3>
+                <h3 className="font-display text-3xl font-bold text-white uppercase mb-3">Готовы лететь?</h3>
                 <p className="text-white/55 font-body leading-relaxed mb-8">
-                  Мест в группе ограничено — всего 12 участников. Оставьте заявку прямо сейчас и получите подробную программу тура на почту.
+                  Мест в группе ограничено — всего 8 участников. Оставьте заявку прямо сейчас и получите подробную программу тура на почту.
                 </p>
                 <button
                   onClick={() => setModalOpen(true)}
@@ -429,9 +429,9 @@ export default function Index() {
       <footer className="border-t border-white/5 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="font-display text-lg font-bold uppercase">
-            <span className="text-gradient">ТУР</span><span className="text-white/60">ЭКСПЕДИЦИЯ</span>
+            <span className="text-gradient">МЕБЕЛЬ</span><span className="text-white/60">ТУР</span>
           </span>
-          <span className="text-white/30 font-body text-sm">© 2026 ТурЭкспедиция. Все права защищены.</span>
+          <span className="text-white/30 font-body text-sm">© 2026 МебельТур. Все права защищены.</span>
           <div className="flex gap-4">
             {NAV_ITEMS.map(item => (
               <button
